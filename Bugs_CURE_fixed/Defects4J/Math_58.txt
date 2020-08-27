@@ -1,0 +1,15 @@
+src/main/java/org/apache/commons/math/optimization/fitting/GaussianFitter.java 121-121
+Buggy line:
+return fit(new Gaussian.Parametric(), guess);
+
+CURE's patch:
+return fit(( double [ ] ) guess ) ;
+
+Developer's patch:
+return fit(guess);
+
+
+Explanation:
+Given the declaration of guess, 
+final double[] guess = (new ParameterGuesser(getObservations())).guess();
+CURE's patch is equivalent to developer's patch.

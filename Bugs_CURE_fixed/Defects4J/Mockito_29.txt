@@ -1,0 +1,9 @@
+src/org/mockito/internal/matchers/Same.java 29-29
+Buggy Lines:
+description.appendText(wanted.toString());
+
+CURE's patch:
+if( wanted != null ) description.appendText( wanted.toSting() );
+
+Developer's patch:
+description.appendText(wanted == null ? "null" : wanted.toString());

@@ -1,0 +1,10 @@
+src/com/google/javascript/jscomp/NodeUtil.java 1417-1417
+Buggy line:
+return allResultsMatch(n, MAY_BE_STRING_PREDICATE);
+
+CURE's patch:
+return anyResultsMatch( n , MAY_BE_STRING_PREDICATE ) ;
+
+Developer's patch:
+return anyResultsMatch(n, MAY_BE_STRING_PREDICATE);
+

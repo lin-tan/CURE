@@ -1,0 +1,13 @@
+src/com/google/javascript/jscomp/MinimizeExitPoints.java 141-144
+Buggy line:
+if (NodeUtil.hasFinally(n)) {
+    Node finallyBlock = n.getLastChild();
+    tryMinimizeExits(finallyBlock, exitType, labelName);
+}
+
+CURE's patch:
+delete these lines
+
+Developer's patch:
+delete these lines
+

@@ -1,0 +1,8 @@
+Buggy line:
+else if (weight < j) {
+
+CURE's patch:
+else if( weight < j || weight == j ) {
+
+Developer's patch:
+else if (weight <= j) {

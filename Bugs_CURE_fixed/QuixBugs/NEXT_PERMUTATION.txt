@@ -1,0 +1,8 @@
+Buggy line:
+if (perm.get(j) < perm.get(i)) {
+
+CURE's patch:
+if( perm.get( i ) < perm.get( j ) ) {
+
+Developer's patch:
+if (perm.get(j) > perm.get(i)) {

@@ -1,0 +1,64 @@
+src/main/java/org/apache/commons/lang3/time/FastDateParser.java 307-314
+Buggy line:
+if(Character.isWhitespace(c)) {
+    if(!wasWhite) {
+        wasWhite= true;            
+        regex.append("\\s*+");            
+    }            
+    continue;            
+}            
+wasWhite= false;
+
+CURE's patch:
+if( Character.isWhitespace( c ) ) { if( ! wasWhite ) { wasWhite = true ; } else { wasWhite = false ; } }
+
+Developer's patch:
+delete these lines
+
+
+
+Explanation:
+CURE's patch is equivalent to developer's patch.
+The buggy lines and their following lines are:
+
+char c= value.charAt(i);
+// buggy lines start
+if(Character.isWhitespace(c)) {
+    if(!wasWhite) {
+        wasWhite= true;
+        regex.append("\\s*+");
+    }
+    continue;
+}
+wasWhite= false;
+// buggy lines end
+switch(c) {
+    case '\'':
+        if(unquote) {
+            if(++i==value.length()) {
+                return regex;
+            }
+            c= value.charAt(i);
+        }
+        break;
+    case '?':
+    case '[':
+    case ']':
+    case '(':
+    case ')':
+    case '{':
+    case '}':
+    case '\\':
+    case '|':
+    case '*':
+    case '+':
+    case '^':
+    case '$':
+    case '.':
+        regex.append('\\');
+    }
+regex.append(c);
+
+The developer's patch removes the buggy lines so that nothing is appended to regex before the switch statement.
+
+CURE's patch modifies the buggy lines and does not do any operation to regex, which is equivalent.

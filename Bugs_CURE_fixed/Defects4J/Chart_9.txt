@@ -1,0 +1,10 @@
+source/org/jfree/data/time/TimeSeries.java 944-944
+Buggy line:
+if (endIndex < 0) {
+
+CURE's patch:
+if( endIndex <0|| endIndex < startIndex ) {
+
+Developer's patch:
+if ((endIndex < 0)  || (endIndex < startIndex)) {
+

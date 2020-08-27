@@ -1,0 +1,10 @@
+src/main/java/org/apache/commons/lang3/time/FastDateFormat.java 820-820
+Buggy line:
+Calendar c = new GregorianCalendar(mTimeZone);
+
+CURE's patch:
+Calendar c = new GregorianCalendar( mTimeZone , mLocale ) ;
+
+Developer's patch:
+Calendar c = new GregorianCalendar(mTimeZone, mlocal);
+

@@ -1,0 +1,8 @@
+Buggy line:
+while (true) {
+
+CURE's patch:
+while( queue.size( ) >0) {
+
+Developer's patch:
+while (!queue.isEmpty()) {

@@ -1,0 +1,8 @@
+Buggy line:
+while (Math.abs(x-approx) > epsilon) {
+
+CURE's patch:
+while( Math.abs( approx - x / approx ) > epsilon ) {
+
+Developer's patch:
+while (Math.abs(x-approx*approx) > epsilon) {

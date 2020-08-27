@@ -1,0 +1,48 @@
+src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java 187-190
+Buggy line:
+if (x == x1) {
+    x0 = 0.5 * (x0 + x1 - FastMath.max(rtol * FastMath.abs(x1), atol));            
+    f0 = computeObjectiveValue(x0);            
+}
+
+CURE's patch:
+if( f1==0.0) { x0=0.5*( x0+ x1- FastMath.max( rtol *FastMath.abs( x1) , atol ) ) ; f0= computeObjectiveValue( x0) ; }
+
+Developer's patch:
+delete these lines
+
+
+Explanation:
+CURE's patch is equivalent to deleting these lines.
+
+The context of buggy lines is:
+if (f1 == 0.0) {
+    return x1;
+}
+...
+if (f1 * fx < 0) {
+    x0 = x1;
+    f0 = f1;
+    inverted = !inverted;
+} else {
+    switch (method) {
+        case ILLINOIS:
+            f0 *= 0.5;
+            reak;
+        case PEGASUS:
+            f0 *= f1 / (f1 + fx);
+            break;
+        case REGULA_FALSI:
+	    // buggy lines start
+            if (x == x1) {
+                x0 = 0.5 * (x0 + x1 - FastMath.max(rtol * FastMath.abs(x1), atol));
+                f0 = computeObjectiveValue(x0);
+            }
+            // buggy lines end
+            break;
+         default:
+            throw new MathInternalError();
+     }
+}
+
+If f1 is 0, the method returns x1 before entering the switch statement, and in the switch statement, f1 cannot be 0. Thus, CURE's patch is equivalent to deleting the buggy condition.

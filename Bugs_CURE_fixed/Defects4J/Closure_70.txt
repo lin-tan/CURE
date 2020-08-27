@@ -1,0 +1,10 @@
+src/com/google/javascript/jscomp/TypedScopeCreator.java 1744-1745
+Buggy line:
+defineSlot(astParameter, functionNode, jsDocParameter.getJSType(), true);
+
+CURE's patch:
+defineSlot( astParameter , functionNode , jsDocParameter.getJSType( ) , false ) ;
+
+Developer's patch:
+defineSlot(astParameter, functionNode, jsDocParameter.getJSType(), false);
+

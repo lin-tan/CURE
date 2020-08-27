@@ -1,0 +1,8 @@
+Buggy line:
+} else if (x > pivot) {
+
+CURE's patch:
+} else if( x >= pivot ) {
+
+Developer's patch:
+} else if (x >= pivot) {

@@ -1,0 +1,8 @@
+Buggy line:
+return a.charAt(0) + longest_common_subsequence(a.substring(1), b);
+
+CURE's patch:
+return a.charAt(0) + longest_common_subsequence( a.substring(1) , b.substring(1) ) ;
+
+Developer's patch:
+return a.charAt(0) + longest_common_subsequence(a.substring(1), b.substring(1));

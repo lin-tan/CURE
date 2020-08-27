@@ -1,0 +1,10 @@
+src/main/java/org/apache/commons/math/util/FastMath.java 3482-3482
+Buggy line:
+return (a <= b) ? b : (Float.isNaN(a + b) ? Float.NaN : b);
+
+CURE's patch:
+return( a <= b ) ? b :( Float.isNaN( a + b ) ? Float.NaN : a ) ;
+
+Developer's patch:
+return (a <= b) ? b : (Float.isNaN(a + b) ? Float.NaN : a);
+

@@ -1,0 +1,8 @@
+Buggy line:
+return new ArrayList<Integer>();
+
+CURE's patch:
+return new ArrayList < Integer >( Arrays.asList( n ) ) ;
+
+Developer's patch:
+return new ArrayList<Integer>(Arrays.asList(n));

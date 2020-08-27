@@ -1,0 +1,20 @@
+src/com/google/javascript/jscomp/CodeConsumer.java 245-245
+Buggy line:
+if (x < 0 && prev == '-') {
+
+CURE's patch:
+if( x <=0&& prev == '-') {
+
+Developer's patch:
+if ((x < 0 || negativeZero) && prev == '-') {
+
+
+Explanation:
+CURE's patch is equivalent to developer's patch.
+
+Given boolean negativeZero = isNegativeZero(x),
+and isNegativeZero() method as follow:
+static boolean isNegativeZero(double x) {
+    return x == 0.0 && Math.copySign(1, x) == -1.0;
+}
+if x is 0 and prev (i.e. the sign of x) is '-', negativeZero will be true.
