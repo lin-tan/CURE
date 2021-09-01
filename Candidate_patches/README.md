@@ -1,1 +1,0 @@
-# CURE candidate patches
