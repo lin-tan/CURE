@@ -3,7 +3,7 @@ Buggy line:
 return cAvailableLocaleSet.contains(locale);
 
 CURE's patch:
-return cAvailableLocaleSet != null && cAvailableLocaleSet.contains( locale ) ;
+return cAvailableLocaleList.contains( locale ) ;
 
 Developer's patch:
 return availableLocaleList().contains(locale);
