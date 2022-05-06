@@ -1,0 +1,7 @@
+src/java/org/apache/commons/codec/binary/Base64.java_446_446
+
+CURE's patch:
+if( lineLength >0&& encodeSize - pos < encodeSize ) {
+
+Developer's patch:
+if (lineLength > 0 && pos > 0) {

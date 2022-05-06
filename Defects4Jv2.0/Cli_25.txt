@@ -1,0 +1,7 @@
+src/java/org/apache/commons/cli/HelpFormatter.java_825_825
+
+CURE's patch:
+nextLineTabStop =1;
+
+Developer's patch:
+nextLineTabStop = 1;

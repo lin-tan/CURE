@@ -1,0 +1,7 @@
+src/main/java/org/apache/commons/csv/CSVParser.java_288_288
+
+CURE's patch:
+if( this.headerMap != null ) { return this.headerMap ; } else { return null ; }
+
+Developer's patch:
+return this.headerMap == null ? null : new LinkedHashMap<String, Integer>(this.headerMap);

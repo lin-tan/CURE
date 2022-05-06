@@ -1,0 +1,7 @@
+src/main/java/com/fasterxml/jackson/databind/type/SimpleType.java_135_135
+
+CURE's patch:
+return new SimpleType( subclass ,_bindings , this ,_superInterfaces ,
+
+Developer's patch:
+return new SimpleType(subclass, _bindings, this, _superInterfaces,

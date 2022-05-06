@@ -1,0 +1,7 @@
+src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java_1963_1963
+
+CURE's patch:
+if(( i <=0) ||( i < maxCode ) ) {
+
+Developer's patch:
+if (i < maxCode) {
