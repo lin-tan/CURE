@@ -1,0 +1,7 @@
+src/java/org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java_42_42
+
+CURE's patch:
+return compute( args [0].compute( context ) , args [1].compute( context ) )
+
+Developer's patch:
+return compute(args[0].compute(context), args[1].compute(context))

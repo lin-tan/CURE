@@ -1,0 +1,7 @@
+src/main/java/org/jsoup/parser/XmlTreeBuilder.java_117_117
+
+CURE's patch:
+String elName = endTag.name( ).toLowerCase( ) ;
+
+Developer's patch:
+String elName = endTag.normalName();

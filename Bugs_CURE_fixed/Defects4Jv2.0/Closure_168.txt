@@ -1,0 +1,7 @@
+src/com/google/javascript/jscomp/TypedScopeCreator.java_1996_1996
+
+CURE's patch:
+if( t.getScopeDepth( ) < 2) {
+
+Developer's patch:
+if( t.getScopeDepth( ) <= 1) {

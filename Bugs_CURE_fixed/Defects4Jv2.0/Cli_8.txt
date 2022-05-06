@@ -1,0 +1,7 @@
+src/java/org/apache/commons/cli/HelpFormatter.java_812_812
+
+CURE's patch:
+pos = findWrapPos( text , width ,0) ;
+
+Developer's patch:
+pos = findWrapPos(text, width, 0);
