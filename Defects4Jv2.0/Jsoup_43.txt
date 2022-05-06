@@ -1,7 +1,0 @@
-src/main/java/org/jsoup/nodes/Element.java_574_574
-
-CURE's patch:
-if( element.equals( search ) &&( element == search ) )
-
-Developer's patch:
-if(element == search)

@@ -1,7 +1,0 @@
-src/java/org/apache/commons/cli/Parser.java_290_290
-
-CURE's patch:
-continue ; } else { cmd.addOption( opt ) ;
-
-Developer's patch:
-continue;

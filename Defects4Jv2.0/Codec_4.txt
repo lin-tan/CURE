@@ -1,7 +1,0 @@
-src/java/org/apache/commons/codec/binary/Base64.java_225_226
-
-CURE's patch:
-this(0);
-
-Developer's patch:
-this(0);
