@@ -1,0 +1,16 @@
+src/main/java/org/apache/commons/math3/genetics/ListPopulation.java 209-209
+Buggy line:
+return chromosomes.iterator();
+
+CURE's patch:
+return Collections.unmodifiableList( chromosomes ).iterator( ) ;
+
+Developer's patch:
+return getChromosomes().iterator();
+
+
+Explanation:
+CURE's patch is equivalent to developer's patch, since the getChromosomes() method is as follow:
+public List<Chromosome> getChromosomes() {
+    return Collections.unmodifiableList(chromosomes);
+}

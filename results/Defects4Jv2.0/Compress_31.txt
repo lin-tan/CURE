@@ -1,0 +1,7 @@
+src/main/java/org/apache/commons/compress/archivers/tar/TarUtils.java_135_138
+
+CURE's patch:
+'' (equivalent to deleting the buggy lines)
+
+Developer's patch:
+deleting the buggy lines

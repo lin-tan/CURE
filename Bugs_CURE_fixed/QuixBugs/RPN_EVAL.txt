@@ -1,8 +1,0 @@
-Buggy line:
-c = bin_op.apply(a,b);
-
-CURE's patch:
-c = bin_op.apply( b , a.doubleValue( ) ) ;
-
-Developer's patch:
-c = bin_op.apply(b,a);

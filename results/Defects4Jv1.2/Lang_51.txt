@@ -1,0 +1,11 @@
+src/java/org/apache/commons/lang/BooleanUtils.java 682-682
+Buggy line:
+}
+
+CURE's patch:
+} return false ;
+
+Developer's patch:
+}
+return false;
+

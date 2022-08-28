@@ -1,0 +1,7 @@
+src/main/java/com/fasterxml/jackson/core/JsonPointer.java_193_193
+
+CURE's patch:
+char c = str.charAt( i ) ;
+
+Developer's patch:
+char c = str.charAt(i);

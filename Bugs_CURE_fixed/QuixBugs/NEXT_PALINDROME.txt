@@ -1,8 +1,0 @@
-Buggy line:
-otherwise.addAll(Collections.nCopies(digit_list.length, 0));
-
-CURE's patch:
-otherwise.addAll( Collections.nCopies( digit_list.length -1,0) ) ;
-
-Developer's patch:
-otherwise.addAll(Collections.nCopies(digit_list.length-1, 0));

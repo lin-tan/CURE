@@ -1,0 +1,7 @@
+src/main/java/org/apache/commons/collections4/keyvalue/MultiKey.java_277_277
+
+CURE's patch:
+public Object readResolve( ) {
+
+Developer's patch:
+Object readResolve() {

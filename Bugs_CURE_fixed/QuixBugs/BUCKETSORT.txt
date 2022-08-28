@@ -1,8 +1,0 @@
-Buggy line:
-for (Integer count : arr) {
-
-CURE's patch:
-for( Integer count : counts ) {
-
-Developer's patch:
-for (Integer count : counts) {

@@ -1,0 +1,7 @@
+src/main/java/org/jsoup/parser/HtmlTreeBuilder.java_468_471
+
+CURE's patch:
+int bottom = stack.size( ) -1; if( bottom == MaxScopeSearchDepth ) { bottom = MaxScopeSearchDepth ; }
+
+Developer's patch:
+final int bottom = stack.size() - 1;

@@ -1,8 +1,0 @@
-Buggy line:
-n = (n ^ (n - 1));
-
-CURE's patch:
-n =( n &( n -1) ) ;
-
-Developer's patch:
-n = (n & (n - 1));

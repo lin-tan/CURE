@@ -1,0 +1,1 @@
+{"buggy line":"n = x;","imports":["java.util.ArrayList"],"identifiers":["Test","x","y","m","n"],"context":"Test(int x, double y) {\n    n = x;\n    double t = y + x;\n    m = t;\n}"}

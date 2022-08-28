@@ -1,0 +1,7 @@
+src/java/org/apache/commons/jxpath/ri/model/NodePointer.java_665_667
+
+CURE's patch:
+return 0;
+
+Developer's patch:
+return 0;

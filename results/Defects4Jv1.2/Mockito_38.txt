@@ -1,0 +1,10 @@
+src/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java 48-48
+Buggy line:
+return StringDescription.toString(m).equals(arg.toString());
+
+CURE's patch:
+return arg != null && StringDescription.toString( m ).equals( arg.toString( ) ) ;
+
+Developer's patch:
+return StringDescription.toString(m).equals(arg == null? "null" : arg.toString());
+

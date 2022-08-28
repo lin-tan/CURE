@@ -1,7 +1,0 @@
-src/main/java/org/apache/commons/codec/binary/StringUtils.java_339_339
-
-CURE's patch:
-return( bytes == null ) ? null : new String( bytes , Charsets.ISO_8859_1) ;
-
-Developer's patch:
-return newString(bytes, Charsets.ISO_8859_1);

@@ -1,0 +1,8 @@
+Buggy line:
+steps.add(new Pair<Integer,Integer>(start, helper));
+
+CURE's patch:
+steps.add( new Pair < Integer , Integer >( start , end ) ) ;
+
+Developer's patch:
+steps.add(new Pair<Integer,Integer>(start, end));

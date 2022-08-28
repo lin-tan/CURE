@@ -1,9 +1,0 @@
-src/org/mockito/internal/util/reflection/GenericMetadataSupport.java 79-79
-Buggy line:
-} else {
-
-CURE's patch:
-} else if (typeParameter != actualTypeArgument) {
-
-Developer's patch:
-} else if (typeParameter != actualTypeArgument) {

@@ -1,8 +1,0 @@
-Buggy line:
-while (lo <= hi) {
-
-CURE's patch:
-while( lo < hi ) {
-
-Developer's patch:
-while (lo < hi) {

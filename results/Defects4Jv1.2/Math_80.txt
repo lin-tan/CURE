@@ -1,0 +1,10 @@
+src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java 1135-1135
+Buggy line:
+int j = 4 * n - 1;
+
+CURE's patch:
+int j =4* n -4;
+
+Developer's patch:
+int j = 4 * (n - 1);
+

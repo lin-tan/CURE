@@ -1,0 +1,26 @@
+src/com/google/javascript/rhino/jstype/RecordType.java 141-155
+Buggy lines:
+public JSType getLeastSupertype(JSType that) {            
+    if (!that.isRecordType()) {            
+        return super.getLeastSupertype(that);            
+    }            
+    RecordTypeBuilder builder = new RecordTypeBuilder(registry);            
+    for (String property : properties.keySet()) {            
+        if (that.toMaybeRecordType().hasProperty(property) &&            
+            that.toMaybeRecordType().getPropertyType(property).isEquivalentTo(getPropertyType(property))) {            
+            builder.addProperty(property, getPropertyType(property),getPropertyNode(property));            }            
+    }            
+    return builder.build();            
+}
+
+
+CURE's patch:
+public JSType getLeastSupertype( JSType that ) { return super.getLeastSupertype( that ) ; }
+
+
+Developer's path:
+delete this method
+
+
+Explanation:
+CURE's patch makes the getLeastSupertype() method in RecordType class the same as its father class's getLeastSupertype() method, which is equivalent to delete this method in RecordType class.

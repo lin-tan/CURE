@@ -1,8 +1,0 @@
-Buggy line:
-if (hare.getSuccessor() == null)
-
-CURE's patch:
-if( hare == null || hare.getSuccessor( ) == null )
-
-Developer's patch:
-if (null==hare ||hare.getSuccessor() == null)

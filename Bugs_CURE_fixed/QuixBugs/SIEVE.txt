@@ -1,8 +1,0 @@
-Buggy line:
-if (any(list_comp(n, primes))) {
-
-CURE's patch:
-if( all( list_comp( n , primes ) ) ) {
-
-Developer's patch:
-if (all(list_comp(n, primes))) {

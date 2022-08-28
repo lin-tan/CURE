@@ -1,8 +1,0 @@
-Buggy line:
-if (orderedNodes.containsAll(nextNode.getSuccessors()) && !orderedNodes.contains(nextNode)) {
-
-CURE's patch:
-if( orderedNodes.containsAll( nextNode.getPredecessors( ) ) && ! orderedNodes.contains( nextNode ) ) {
-
-Developer's patch:
-if (orderedNodes.containsAll(nextNode.getPredecessors()) && !orderedNodes.contains(nextNode)) {

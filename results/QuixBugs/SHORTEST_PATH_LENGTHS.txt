@@ -1,0 +1,8 @@
+Buggy line:
+length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(j,k)));
+
+CURE's patch:
+length_by_path.get( Arrays.asList( i , k ) ) + length_by_path.get( Arrays.asList( k , j ) ) ) ;
+
+Developer's patch:
+length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(k,j)));

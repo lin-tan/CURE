@@ -1,0 +1,8 @@
+Buggy line:
+result = result + String.valueOf(alphabet.charAt(i));
+
+CURE's patch:
+result = String.valueOf( alphabet.charAt( i ) ) + result ;
+
+Developer's patch:
+result = String.valueOf(alphabet.charAt(i))+result;

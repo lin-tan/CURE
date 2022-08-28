@@ -1,0 +1,15 @@
+src/java/org/apache/commons/lang3/time/FastDateFormat.java 872-872
+Buggy line:
+calendar = (Calendar) calendar.clone();
+
+CURE's patch:
+calendar.setTime( calendar.getTime( ) ) ;
+
+Developer's patch:
+calendar.getTime();
+calendar = (Calendar) calendar.clone();
+
+
+Explanation:
+Based on the bug report in https://issues.apache.org/jira/browse/LANG-538,
+the only requirement to fix the bug is to call getTime(), which is done in CURE's patch.

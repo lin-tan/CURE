@@ -1,0 +1,8 @@
+Buggy line:
+weight_by_edge.put(edge, update_weight);
+
+CURE's patch:
+weight_by_node.put( edge.get(1) , update_weight ) ;
+
+Developer's patch:
+weight_by_node.put(edge.get(1), update_weight);

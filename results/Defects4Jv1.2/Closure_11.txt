@@ -1,0 +1,24 @@
+src/com/google/javascript/jscomp/TypeCheck.java 1314-1315
+Buggy line:
+} else if (n.getJSType() != null && parent.isAssign()) {            
+    return;
+
+CURE's patch:
+} else if( n.getJSType( ) == null && parent.isAssign( ) ) {
+
+Developer's patch:
+delete these two lines
+
+
+Explanation:
+CURE's patch is equivalent to deleting.
+From the following getJSType() method,
+private JSType getJSType(Node n) {
+    JSType jsType = n.getJSType();
+    if (jsType == null) {
+        return getNativeType(UNKNOWN_TYPE);
+    } else {
+        return jsType;
+    }
+} 
+getJSType() can not be null and this condition is always false, which is euivalent to removing this condition.

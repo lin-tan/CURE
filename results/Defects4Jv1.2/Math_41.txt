@@ -1,0 +1,10 @@
+src/main/java/org/apache/commons/math/stat/descriptive/moment/Variance.java 520-520
+Buggy line:
+for (int i = 0; i < weights.length; i++) {
+
+CURE's patch:
+for( int i = begin +0; i < begin + length ; i ++ ) {
+
+Developer's patch:
+for (int i = begin; i < begin + length; i++) {
+

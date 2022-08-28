@@ -1,0 +1,10 @@
+src/com/google/javascript/jscomp/NameAnalyzer.java 635-636
+Buggy line:
+JsName name = getName(ns.name, false);
+
+CURE's patch:
+JsName name = getName( ns.name , true ) ;
+
+Developer's patch:
+JsName name = getName(ns.name, true);
+

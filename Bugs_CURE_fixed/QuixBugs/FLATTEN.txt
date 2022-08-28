@@ -1,8 +1,0 @@
-Buggy line:
-result.add(flatten(x)); } } return result; } else { return flatten(arr); }
-
-CURE's patch:
-result.add( x ) ; } } return result ; } else { return arr ; }
-
-Developer's patch:
-result.add((x)); } } return result; } else { return arr; }

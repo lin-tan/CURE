@@ -1,0 +1,8 @@
+Buggy line:
+return kth( above , k) ;
+
+CURE's patch:
+return kth( above , k - num_lessoreq ) ;
+
+Developer's patch:
+return kth(above, k-num_lessoreq);

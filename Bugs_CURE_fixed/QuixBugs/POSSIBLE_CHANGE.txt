@@ -1,8 +1,0 @@
-Buggy line:
-if (total < 0) {
-
-CURE's patch:
-if( total <0|| coins.length == 0 ) {
-
-Developer's patch:
-if (total < 0 ||coins.length==0) {

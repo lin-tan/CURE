@@ -1,0 +1,1 @@
+double t = y + x CaMeL Y ;  <CTX>  Test ( int x CaMeL Y , double y ) { n = x CaMeL Y ; double t = y + x CaMeL Y ; m = t ; }

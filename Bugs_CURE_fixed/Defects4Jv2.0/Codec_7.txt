@@ -1,7 +1,0 @@
-src/java/org/apache/commons/codec/binary/Base64.java_670_670
-
-CURE's patch:
-return StringUtils.newStringUtf8( encodeBase64( binaryData , false ) ) ;
-
-Developer's patch:
-return StringUtils.newStringUtf8(encodeBase64(binaryData, false));

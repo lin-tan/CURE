@@ -1,0 +1,13 @@
+src/main/java/org/apache/commons/math3/distribution/HypergeometricDistribution.java 268-268
+Buggy line:
+return (double) (getSampleSize() * getNumberOfSuccesses()) / (double) getPopulationSize();
+
+CURE's patch:
+return( double ) getSampleSize( ) *getNumberOfSuccesses( ) /( double ) getPopulationSize( ) ;
+
+Developer's patch:
+return getSampleSize() * (getNumberOfSuccesses() / (double) getPopulationSize());
+
+
+Explanation:
+Converting getSampleSize() to double first solve this bug.

@@ -1,8 +1,0 @@
-Buggy line:
-for (int c=0; c<r; c++) {
-
-CURE's patch:
-for( int c =0; c <= r ; c ++ ) {
-
-Developer's patch:
-for (int c=0; c<r+1; c++) {

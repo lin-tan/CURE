@@ -1,0 +1,7 @@
+src/main/java/org/jsoup/nodes/Attribute.java_80_81
+
+CURE's patch:
+return val == null ? "": val
+
+Developer's patch:
+return Attributes.checkNotNull(val);

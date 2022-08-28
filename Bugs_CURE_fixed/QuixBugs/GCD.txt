@@ -1,8 +1,0 @@
-Buggy line:
-return gcd(a % b, b);
-
-CURE's patch:
-return gcd( b, a%b ) ;
-
-Developer's patch:
-return gcd(b, a%b);

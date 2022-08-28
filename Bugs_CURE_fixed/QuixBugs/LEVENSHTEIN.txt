@@ -1,8 +1,0 @@
-Buggy line:
-return 1 + levenshtein(source.substring(1), target.substring(1));
-
-CURE's patch:
-return levenshtein( source.substring(1) , target.substring(1) ) ;
-
-Developer's patch:
-return levenshtein(source.substring(1), target.substring(1));
