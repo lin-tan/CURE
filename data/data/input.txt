@@ -1,1 +1,1 @@
-double t = y + x ; <CTX> Test ( int x , double y ) { n = x ; double t = y + x ; m = t ; }
+double t = y + xY ; <CTX> Test ( int xY , double y ) { n = xY ; double t = y + xY ; m = t ; }
