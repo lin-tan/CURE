@@ -19,4 +19,4 @@ subword-nmt apply-bpe -c ../vocabulary/subword.txt < identifier.tokens > identif
 ```
 * thirdly, comment the `prepare_cure_input` function and uncomment the `clean_testing_bpe`function and run this file again.
 
-You can write your own script to call the `prepare_cure_input` function, `subword-nmt` commend in shell and call the `clean_testing_bpe` function sequentially.
+You can write your own script to call the `prepare_cure_input` function, `subword-nmt` command, and call the `clean_testing_bpe` function sequentially.
