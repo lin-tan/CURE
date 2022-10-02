@@ -8,3 +8,15 @@ the training data tokenized by spaces, strings, numbers, camel letters and udner
 the training data tokenized by subword-tokenizer
 * prepare_training_data.py:
 the code for preparing/preprocessing training data
+
+## Prepare Test Input
+To prepare test input for new test data, 
+* first run the `prepare_cure_input` function in `prepare_test_input.py`, argument `buggy_file` is the path to the file that contains the buggy code.
+* then run commands:
+```
+subword-nmt apply-bpe -c ../vocabulary/subword.txt < input.txt > input_bpe.txt
+subword-nmt apply-bpe -c ../vocabulary/subword.txt < identifier.tokens > identifier_bpe.tokens
+```
+* thirdly, comment the `prepare_cure_input` function and uncomment the `clean_testing_bpe`function and run this file again.
+
+You can write your own script to call the `prepare_cure_input` function, `subword-nmt` commend in shell and call the `clean_testing_bpe` function sequentially.
