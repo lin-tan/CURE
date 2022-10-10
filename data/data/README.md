@@ -18,5 +18,6 @@ subword-nmt apply-bpe -c ../vocabulary/subword.txt < input.txt > input_bpe.txt
 subword-nmt apply-bpe -c ../vocabulary/subword.txt < identifier.tokens > identifier_bpe.tokens
 ```
 * thirdly, comment the `prepare_cure_input` function and uncomment the `clean_testing_bpe`function and run this file again.
+* the final `input_bpe.txt`, `identifier.txt` and `identifier_bpe.tokens` are the files passed to the src/tester/generator.py.
 
 You can write your own script to call the `prepare_cure_input` function, `subword-nmt` command, and call the `clean_testing_bpe` function sequentially.
