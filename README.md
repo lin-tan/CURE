@@ -43,6 +43,8 @@ Some settings you may need to change:
   * hyper_parameter: the hyper-parameter of the model (including the number of encoder/decoder layers, dropout rate, etc.)
   * save_dir: the directory to save the model, default: data/models/
 
+**To prepare input for new test data**, check `data/data/prepare_testing_data.py`, make sure you check the readme file and follow the three steps to prepare the test input.
+
 **To generate patches**, run `src/tester/generator.py`
 Some settings you may need to change:
   * vocab_file: the path to the vocabulary file used by the model
