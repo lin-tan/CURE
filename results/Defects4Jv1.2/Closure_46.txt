@@ -18,7 +18,7 @@ CURE's patch:
 public JSType getLeastSupertype( JSType that ) { return super.getLeastSupertype( that ) ; }
 
 
-Developer's path:
+Developer's patch:
 delete this method
 
 
