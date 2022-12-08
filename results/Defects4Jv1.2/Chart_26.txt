@@ -5,6 +5,6 @@ EntityCollection entities = owner.getEntityCollection();
 CURE's patch:
 EntityCollection entities = owner != null ? owner.getEntityCollection( ) : null ;
 
-Develoepr's patch:
+Developer's patch:
 if (owner != null) {
     EntityCollection entities = owner.getEntityCollection();
